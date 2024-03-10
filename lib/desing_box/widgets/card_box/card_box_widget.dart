@@ -7,9 +7,10 @@ class CardBoxWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: AppResponsive.size(80),
-      width: AppResponsive.size(100),
-      color: Colors.green,
+      height: AppResponsive.size(150),
+      width: AppResponsive.size(200),
+      decoration: BoxDecoration(
+          color: Colors.green, borderRadius: BorderRadius.circular(10)),
     );
   }
 }

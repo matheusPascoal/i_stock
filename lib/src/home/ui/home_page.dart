@@ -14,7 +14,8 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return const Scaffold(
       body: Column(
-        children: [CardBoxWidget()],
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [Center(child: CardBoxWidget())],
       ),
     );
   }
