@@ -1,3 +1,3 @@
 class Failure implements Exception {}
 
-class ClienteError extends Failure {}
+class ProductError extends Failure {}

@@ -1,11 +1,10 @@
-import '../src/home/domain/errors/error.dart';
+import '../src/products/domain/errors/error.dart';
 
 abstract class ClientUser {
   Future<ClientResponse> get({
     required String path,
     Map<String, dynamic>? queryParams,
     Map<String, dynamic>? headers,
-  
   });
 
   Future<ClientResponse> post({
@@ -33,6 +32,7 @@ abstract class ClientUser {
     Map<String, dynamic>? headers,
   });
 }
+
 class ApiHeader {
   final Map<String, dynamic> data;
   const ApiHeader({required this.data});
