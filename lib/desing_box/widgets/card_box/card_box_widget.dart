@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:i_stock/desing_box/util/app_responsive.dart';
 
 class CardBoxWidget extends StatelessWidget {
-  const CardBoxWidget({super.key});
+  const CardBoxWidget({super.key, required this.description});
+  final String description;
 
   @override
   Widget build(BuildContext context) {
@@ -28,10 +29,10 @@ class CardBoxWidget extends StatelessWidget {
                   ),
                 ),
               ),
-              const Row(
+              Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text('Peso (g): 180'),
+                  Text(description),
                 ],
               )
             ],

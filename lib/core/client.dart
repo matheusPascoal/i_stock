@@ -1,4 +1,4 @@
-import '../src/products/domain/errors/error.dart';
+import 'errors/errors.dart';
 
 abstract class ClientUser {
   Future<ClientResponse> get({
@@ -54,5 +54,6 @@ class ClientResponse {
 class HttpServiceError extends Failure {
   final String message;
   final StackTrace? stackTrace;
-  HttpServiceError({required this.message, this.stackTrace});
+  HttpServiceError(
+      {required this.message, this.stackTrace, required super.erroMenssage});
 }

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-import 'src/products/ui/home.dart';
+import 'app_widget.dart';
 
 void main() async {
   runApp(const MaterialApp(
-    home: Home(),
+    home: MyApp(),
   ));
 }
