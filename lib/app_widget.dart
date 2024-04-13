@@ -1,19 +1,23 @@
 import 'package:flutter/material.dart';
 
-import 'src/product/view/home_page.dart';
+import 'src/home/home_page.dart';
+import 'src/splash/splash_page.dart';
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class AppWidget extends StatelessWidget {
+  const AppWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: HomePage(),
+      title: 'IStock',
+      home: const SplashPage(),
+      routes: <String, WidgetBuilder>{
+        '/HomePage': (BuildContext context) => const HomePage()
+      },
     );
   }
 }

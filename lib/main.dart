@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_modular/flutter_modular.dart';
+import 'package:i_stock/app_module.dart';
+import 'package:i_stock/app_widget.dart';
 
-import 'app_widget.dart';
-
-void main() async {
-  runApp(const MaterialApp(
-    home: MyApp(),
+void main() {
+  runApp(ModularApp(
+    module: AppModule(),
+    child: const AppWidget(),
   ));
 }
