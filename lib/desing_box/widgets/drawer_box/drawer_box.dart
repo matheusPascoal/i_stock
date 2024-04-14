@@ -3,7 +3,9 @@ import 'package:flutter/material.dart';
 import '../../images/i_stock_png.dart';
 
 class DrawerBox extends StatelessWidget {
-  const DrawerBox({super.key});
+  const DrawerBox({
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {

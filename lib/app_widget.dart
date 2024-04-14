@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'src/home/home_page.dart';
+import 'src/product/produtc_page.dart';
 import 'src/splash/splash_page.dart';
 
 class AppWidget extends StatelessWidget {
@@ -16,7 +16,8 @@ class AppWidget extends StatelessWidget {
       title: 'IStock',
       home: const SplashPage(),
       routes: <String, WidgetBuilder>{
-        '/HomePage': (BuildContext context) => const HomePage()
+        '/HomePage': (BuildContext context) => const ProdutcPage()
+        // HomePage()
       },
     );
   }

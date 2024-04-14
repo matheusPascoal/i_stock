@@ -1,31 +1,48 @@
 import 'package:flutter/material.dart';
+import 'package:i_stock/desing_box/colors/box_colors.dart';
 
 class GridBox extends StatelessWidget {
   const GridBox({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final List<String> items =
-        List.generate(10, (index) => 'Item ${index + 1}');
-    return GridView.builder(
-        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-          crossAxisCount: 2, // número de colunas
-          mainAxisSpacing: 8.0,
-          crossAxisSpacing: 8.0,
-          childAspectRatio: 1.0, // proporção da altura em relação à largura
+    return GridView.count(
+      primary: false,
+      crossAxisSpacing: 10,
+      mainAxisSpacing: 10,
+      crossAxisCount: 2,
+      children: <Widget>[
+        Container(
+          padding: const EdgeInsets.all(8),
+          color: BoxColors.boxPrimary,
+          child: const Text("He'd have you all unravel at the"),
         ),
-        itemBuilder: (BuildContext context, int index) {
-          return GridTile(
-            child: Container(
-              color: Colors.blue[100 * ((index % 9) + 1)],
-              child: Center(
-                child: Text(
-                  items[index],
-                  style: const TextStyle(fontSize: 20),
-                ),
-              ),
-            ),
-          );
-        });
+        Container(
+          padding: const EdgeInsets.all(8),
+          color: BoxColors.boxPrimary,
+          child: const Text('Heed not the rabble'),
+        ),
+        Container(
+          padding: const EdgeInsets.all(8),
+          color: BoxColors.boxPrimary,
+          child: const Text('Sound of screams but the'),
+        ),
+        Container(
+          padding: const EdgeInsets.all(8),
+          color: BoxColors.boxPrimary,
+          child: const Text('Who scream'),
+        ),
+        Container(
+          padding: const EdgeInsets.all(8),
+          color: BoxColors.boxPrimary,
+          child: const Text('Revolution is coming...'),
+        ),
+        Container(
+          padding: const EdgeInsets.all(8),
+          color: BoxColors.boxPrimary,
+          child: const Text('Revolution, they...'),
+        ),
+      ],
+    );
   }
 }

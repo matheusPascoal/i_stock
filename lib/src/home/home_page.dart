@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:i_stock/desing_box/colors/box_colors.dart';
 import 'package:i_stock/desing_box/widgets/card_box/home_card_widget.dart';
+import 'package:i_stock/desing_box/widgets/grid_box/grid_box.dart';
 
 import '../../desing_box/widgets/drawer_box/drawer_box.dart';
 
@@ -23,7 +24,9 @@ class HomePage extends StatelessWidget {
             SizedBox(
               height: 50,
             ),
-            // GridBox(),
+            Expanded(
+              child: GridBox(),
+            ),
           ],
         ),
       ),
