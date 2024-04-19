@@ -16,7 +16,7 @@ class HomeCardWidget extends StatelessWidget {
         GestureDetector(
           onTap: onTap,
           child: Container(
-            height: AppResponsive.size(169),
+            height: BoxSize.size(169),
             width: mediaQuery.width,
             decoration: BoxDecoration(
               color: BoxColors.boxPrimary,

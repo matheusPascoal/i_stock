@@ -1,24 +1,21 @@
 import 'package:flutter/material.dart';
 
-import 'src/product/produtc_page.dart';
-import 'src/splash/splash_page.dart';
+import 'core/routes/routes.dart';
 
 class AppWidget extends StatelessWidget {
-  const AppWidget({super.key});
+  const AppWidget({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
       debugShowCheckedModeBanner: false,
+      title: 'Istock',
       theme: ThemeData(
         useMaterial3: true,
       ),
-      title: 'IStock',
-      home: const SplashPage(),
-      routes: <String, WidgetBuilder>{
-        '/HomePage': (BuildContext context) => const ProdutcPage()
-        // HomePage()
-      },
+      routerDelegate: routers.routerDelegate,
+      routeInformationParser: routers.routeInformationParser,
+      routeInformationProvider: routers.routeInformationProvider,
     );
   }
 }

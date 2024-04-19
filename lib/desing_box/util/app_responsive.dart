@@ -1,7 +1,7 @@
 import 'dart:math';
 import 'dart:ui';
 
-class AppResponsive {
+class BoxSize {
   // static  _mockupHeight = 979;
   static const _mockupWidth = 430;
   static double textScaleFactor = 1;

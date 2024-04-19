@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:i_stock/desing_box/images/i_stock_png.dart';
 
 class SplashPage extends StatefulWidget {
@@ -12,7 +13,7 @@ class SplashPage extends StatefulWidget {
 
 class SplashPageState extends State<SplashPage> {
   void navigationToNextPage() {
-    Navigator.pushReplacementNamed(context, '/HomePage');
+    context.push('/home');
   }
 
   startSplashScreenTimer() async {

@@ -23,7 +23,7 @@ class CustomListItemTwo extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 10.0),
       child: SizedBox(
-        height: 100,
+        height: 80,
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[

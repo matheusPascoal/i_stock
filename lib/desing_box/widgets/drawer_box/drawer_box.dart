@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 import '../../images/i_stock_png.dart';
 
@@ -22,10 +23,24 @@ class DrawerBox extends StatelessWidget {
         const SizedBox(
           height: 20,
         ),
-        TextButton(onPressed: () {}, child: const Text('HOME')),
-        TextButton(onPressed: () {}, child: const Text('PERFIL')),
-        TextButton(onPressed: () {}, child: const Text('STOCK')),
-        TextButton(onPressed: () {}, child: const Text('HISTORICO')),
+        TextButton(
+            onPressed: () {
+              context.push('/home/perfil');
+              context.pop();
+            },
+            child: const Text('PERFIL')),
+        TextButton(
+            onPressed: () {
+              context.push('/home/product');
+              context.pop();
+            },
+            child: const Text('STOCK')),
+        TextButton(
+            onPressed: () {
+              context.push('/home/historic');
+              context.pop();
+            },
+            child: const Text('HISTORICO')),
       ],
     );
   }
