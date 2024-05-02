@@ -1,19 +1,16 @@
-// import 'package:dartz/dartz.dart';
+import 'package:flutter_modular/flutter_modular.dart';
 
-// import 'package:flutter_modular/flutter_modular.dart';
+import 'src/home/home_page.dart';
+import 'src/product/domain/usecase/get_all_product_usecase.dart';
 
-// import 'src/home/home_module.dart';
-// import 'src/product/product_module.dart';
-// import 'src/splash/splash_module.dart';
+class AppModule extends Module {
+  @override
+  final List<Bind> binds = [
+    Bind.singleton((i) => GetAllProductUsecase(i())),
+  ];
 
-// class AppModule extends Module {}
-
-// @override
-// List<Module> get imports => [];
-
-// @override
-// List<ModularRoute> get routes => [
-//       ModuleRoute('/', module: SplashPage()),
-//       ModuleRoute('/home', module: HomeModule()),
-//       ModuleRoute('/product', module: ProductModule()),
-//     ];
+  @override
+  final List<ModularRoute> routes = [
+    ChildRoute('/', child: (_, __) => const HomePage()),
+  ];
+}
